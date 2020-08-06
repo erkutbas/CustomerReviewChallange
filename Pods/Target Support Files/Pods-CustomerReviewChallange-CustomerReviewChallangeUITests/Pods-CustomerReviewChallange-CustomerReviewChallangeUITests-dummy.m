@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_CustomerReviewChallange_CustomerReviewChallangeUITests : NSObject
+@end
+@implementation PodsDummy_Pods_CustomerReviewChallange_CustomerReviewChallangeUITests
+@end
