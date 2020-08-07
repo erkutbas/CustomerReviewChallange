@@ -50,13 +50,13 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
         
     }
     
-    // MARK: - Onboarding Screens Implementations -
+    // MARK: - Tutorial Screens Implementations -
     private func launchTutorialProcess() {
         UserDefaultsGenericStructStore.hasLaunchBefore = .launched
         
     }
     
-    private func registerOnboardingObservers() {
+    private func registerTutorialObservers() {
         
     }
     
