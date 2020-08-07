@@ -22,6 +22,7 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
         self.tutorialManager = tutorialManager
         
         super.init(viewModel: appViewModel)
+        
     }
     
     override func start() {
