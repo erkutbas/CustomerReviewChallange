@@ -26,7 +26,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="lCb-ru-mwF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Arw-aS-K9i"/>
-                            <constraint firstItem="lCb-ru-mwF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="dtC-Ws-fUX"/>
+                            <constraint firstItem="lCb-ru-mwF" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="5" id="dtC-Ws-fUX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

@@ -49,7 +49,7 @@ class SplashScreenViewController: BaseViewController<SplashScreenViewModel> {
         NSLayoutConstraint.activate([
         
             imageContainer.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imageContainer.bottomAnchor.constraint(equalTo: view.centerYAnchor),
+            imageContainer.bottomAnchor.constraint(equalTo: view.centerYAnchor, constant: 5),
             imageContainer.heightAnchor.constraint(equalToConstant: 100),
             imageContainer.widthAnchor.constraint(equalToConstant: 100),
             
