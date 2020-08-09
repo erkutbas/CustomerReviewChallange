@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import Swinject
 
 class AppCoordinator: BaseCoordinator<AppViewModel> {
     
@@ -16,6 +17,7 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
     private let tutorialManager: TutorialManager
     
     var window = UIWindow(frame: UIScreen.main.bounds)
+    //var window: UIWindow?
     
     init(networkConnectionManager: NetworkConnectionManager, tutorialManager: TutorialManager, appViewModel: AppViewModel) {
         self.networkConnectionManager = networkConnectionManager
@@ -27,7 +29,6 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
     
     override func start() {
         window.makeKeyAndVisible()
-        
         launchApplication()
     }
     
@@ -49,11 +50,21 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
     private func launchMainProcess() {
         removeChildCoordinators()
         
+        guard let coordinator = AssemblerResolver.resolve(MainCoordinator.self) else { return }
+        start(coordinator: coordinator)
+        
+        ViewControllerUtils.setRootViewController(window: window, viewController: coordinator.navigationController, withAnimation: true)
+        
     }
     
     // MARK: - Tutorial Screens Implementations -
     private func launchTutorialProcess() {
         UserDefaultsGenericStructStore.hasLaunchBefore = .launched
+        
+        guard let coordinator = AssemblerResolver.resolve(TutorialCoordinator.self) else { return }
+        start(coordinator: coordinator)
+        
+        ViewControllerUtils.setRootViewController(window: window, viewController: coordinator.navigationController, withAnimation: true)
         
     }
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Swinject
 
 public class BaseCoordinator<T: BaseViewModelDelegate>: NSObject, Coordinator {
     
@@ -16,13 +17,15 @@ public class BaseCoordinator<T: BaseViewModelDelegate>: NSObject, Coordinator {
         self.viewModel = viewModel
     }
     
+    public var AssemblerResolver = Assembler.sharedAssembler.resolver
+    
     public var navigationController = UINavigationController()
     public var viewContoller = UIViewController()
     public var childCoordinators: [Coordinator] = []
     public var parentCoordinator: Coordinator?
 
     public func start() {
-        fatalError("Start method should be implemented.")
+        //fatalError("Start method should be implemented.")
     }
 
     public func start(coordinator: Coordinator) {

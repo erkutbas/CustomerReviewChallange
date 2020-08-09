@@ -10,11 +10,12 @@ import Foundation
 import Swinject
 
 extension Assembler {
+    
     static let sharedAssembler: Assembler = {
        
         let container = Container()
         
-        let assembler = Assembler([ViewModelsAssembly()],
+        let assembler = Assembler([ViewModelsAssembly(), CoordinatorsAssembly(), ManagerAssembly()],
                                   container: container)
         return assembler
         
