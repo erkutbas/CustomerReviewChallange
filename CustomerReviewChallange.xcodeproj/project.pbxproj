@@ -81,6 +81,16 @@
 		A7F2FC3824DF87DC00E5A72B /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FC3724DF87DC00E5A72B /* SplashScreenViewModel.swift */; };
 		A7F2FC3A24DF87E600E5A72B /* SplashScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FC3924DF87E600E5A72B /* SplashScreenCoordinator.swift */; };
 		A7F2FC3D24DF887000E5A72B /* VisualContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FC3C24DF887000E5A72B /* VisualContent.swift */; };
+		A7F2FC3F24DF99DE00E5A72B /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FC3E24DF99DE00E5A72B /* TutorialViewController.swift */; };
+		A7F2FC4124DF9C0600E5A72B /* ColorSpectrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FC4024DF9C0600E5A72B /* ColorSpectrum.swift */; };
+		A7F2FC4324DF9CB300E5A72B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FC4224DF9CB300E5A72B /* UIColor+Extension.swift */; };
+		A7F2FC4624DF9DD000E5A72B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FC4524DF9DD000E5A72B /* BaseView.swift */; };
+		A7F2FC4824DF9E1800E5A72B /* GenericBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FC4724DF9E1800E5A72B /* GenericBaseView.swift */; };
+		A7F2FC4A24DF9EE200E5A72B /* TutorialViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FC4924DF9EE200E5A72B /* TutorialViewComponent.swift */; };
+		A7F2FC4C24DF9F0000E5A72B /* TutorialViewCompoentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FC4B24DF9F0000E5A72B /* TutorialViewCompoentData.swift */; };
+		A7F2FC4E24DFA07900E5A72B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FC4D24DFA07900E5A72B /* BaseCollectionViewCell.swift */; };
+		A7F2FC5024DFA0E900E5A72B /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FC4F24DFA0E900E5A72B /* UICollectionView+Extension.swift */; };
+		A7F2FC5324DFA1F700E5A72B /* TutorialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FC5224DFA1F700E5A72B /* TutorialCollectionViewCell.swift */; };
 		CCCF0D9F6AF1729EE52E0F4B /* Pods_CustomerReviewChallange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66ABD0F222EDCE3FAD4D72B /* Pods_CustomerReviewChallange.framework */; };
 /* End PBXBuildFile section */
 
@@ -188,6 +198,16 @@
 		A7F2FC3724DF87DC00E5A72B /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
 		A7F2FC3924DF87E600E5A72B /* SplashScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenCoordinator.swift; sourceTree = "<group>"; };
 		A7F2FC3C24DF887000E5A72B /* VisualContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualContent.swift; sourceTree = "<group>"; };
+		A7F2FC3E24DF99DE00E5A72B /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		A7F2FC4024DF9C0600E5A72B /* ColorSpectrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSpectrum.swift; sourceTree = "<group>"; };
+		A7F2FC4224DF9CB300E5A72B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		A7F2FC4524DF9DD000E5A72B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		A7F2FC4724DF9E1800E5A72B /* GenericBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBaseView.swift; sourceTree = "<group>"; };
+		A7F2FC4924DF9EE200E5A72B /* TutorialViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewComponent.swift; sourceTree = "<group>"; };
+		A7F2FC4B24DF9F0000E5A72B /* TutorialViewCompoentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewCompoentData.swift; sourceTree = "<group>"; };
+		A7F2FC4D24DFA07900E5A72B /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		A7F2FC4F24DFA0E900E5A72B /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		A7F2FC5224DFA1F700E5A72B /* TutorialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCollectionViewCell.swift; sourceTree = "<group>"; };
 		B1A29A21D3645B80A785FB12 /* Pods-CustomerReviewChallangeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerReviewChallangeTests.debug.xcconfig"; path = "Target Support Files/Pods-CustomerReviewChallangeTests/Pods-CustomerReviewChallangeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C66ABD0F222EDCE3FAD4D72B /* Pods_CustomerReviewChallange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomerReviewChallange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -319,6 +339,7 @@
 		A7F2FB8C24DCC1CE00E5A72B /* PresenterLayer */ = {
 			isa = PBXGroup;
 			children = (
+				A7F2FC4424DF9D9800E5A72B /* CustomComponents */,
 				A7F2FC3424DF868300E5A72B /* SplashScreenCoordinator */,
 				A7F2FBD624DF31A600E5A72B /* TutorialCoordinator */,
 				A7F2FBC824DDD7AE00E5A72B /* MainCoordinator */,
@@ -354,6 +375,8 @@
 				A7F2FB9024DCC38400E5A72B /* Assembler+Extension.swift */,
 				A7F2FBC324DCD1C800E5A72B /* UserDefaults+Extension.swift */,
 				A7F2FC3224DF7E8000E5A72B /* String+Extensions.swift */,
+				A7F2FC4224DF9CB300E5A72B /* UIColor+Extension.swift */,
+				A7F2FC4F24DFA0E900E5A72B /* UICollectionView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -484,6 +507,9 @@
 			isa = PBXGroup;
 			children = (
 				A7F2FBD024DDD83F00E5A72B /* BaseViewController.swift */,
+				A7F2FC4524DF9DD000E5A72B /* BaseView.swift */,
+				A7F2FC4724DF9E1800E5A72B /* GenericBaseView.swift */,
+				A7F2FC4D24DFA07900E5A72B /* BaseCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -493,6 +519,7 @@
 			children = (
 				A7F2FBD724DF31B300E5A72B /* TutorialCoordinator.swift */,
 				A7F2FBD924DF31DF00E5A72B /* TutorialViewModel.swift */,
+				A7F2FC3E24DF99DE00E5A72B /* TutorialViewController.swift */,
 			);
 			path = TutorialCoordinator;
 			sourceTree = "<group>";
@@ -573,8 +600,27 @@
 			isa = PBXGroup;
 			children = (
 				A7F2FC3C24DF887000E5A72B /* VisualContent.swift */,
+				A7F2FC4024DF9C0600E5A72B /* ColorSpectrum.swift */,
 			);
 			path = VisualContents;
+			sourceTree = "<group>";
+		};
+		A7F2FC4424DF9D9800E5A72B /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A7F2FC5124DFA1D700E5A72B /* TutorialViewComponents */,
+			);
+			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		A7F2FC5124DFA1D700E5A72B /* TutorialViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A7F2FC4B24DF9F0000E5A72B /* TutorialViewCompoentData.swift */,
+				A7F2FC4924DF9EE200E5A72B /* TutorialViewComponent.swift */,
+				A7F2FC5224DFA1F700E5A72B /* TutorialCollectionViewCell.swift */,
+			);
+			path = TutorialViewComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -855,6 +901,8 @@
 				A7F2FC3624DF87C000E5A72B /* SplashScreenViewController.swift in Sources */,
 				A7F2FB9C24DCC64100E5A72B /* BaseCoordinator.swift in Sources */,
 				A7F2FBBF24DCD16800E5A72B /* TutorialStates.swift in Sources */,
+				A7F2FC5324DFA1F700E5A72B /* TutorialCollectionViewCell.swift in Sources */,
+				A7F2FC3F24DF99DE00E5A72B /* TutorialViewController.swift in Sources */,
 				A7F2FBD124DDD83F00E5A72B /* BaseViewController.swift in Sources */,
 				A7F2FBDC24DF37ED00E5A72B /* ManagerAssembly.swift in Sources */,
 				A7F2FBAB24DCC7F500E5A72B /* TutorialManager.swift in Sources */,
@@ -865,6 +913,8 @@
 				A7F2FC3A24DF87E600E5A72B /* SplashScreenCoordinator.swift in Sources */,
 				A7F2FBC724DDD75E00E5A72B /* ViewControllerUtilities.swift in Sources */,
 				A7F2FBBA24DCCBDA00E5A72B /* UserDefaultsGenericStructWrapper.swift in Sources */,
+				A7F2FC4624DF9DD000E5A72B /* BaseView.swift in Sources */,
+				A7F2FC4E24DFA07900E5A72B /* BaseCollectionViewCell.swift in Sources */,
 				A7F2FBC224DCD19A00E5A72B /* ConstantKeyStrings.swift in Sources */,
 				A7F2FBAE24DCC83900E5A72B /* CommonTypealises.swift in Sources */,
 				A7F2FBDA24DF31DF00E5A72B /* TutorialViewModel.swift in Sources */,
@@ -872,18 +922,24 @@
 				A7F2FBA124DCC69500E5A72B /* BaseViewModelDelegate.swift in Sources */,
 				A7F2FC3D24DF887000E5A72B /* VisualContent.swift in Sources */,
 				A7F2FBD824DF31B300E5A72B /* TutorialCoordinator.swift in Sources */,
+				A7F2FC4124DF9C0600E5A72B /* ColorSpectrum.swift in Sources */,
 				A7F2FC3124DF7DA200E5A72B /* LocalizableConstants.swift in Sources */,
 				A7F2FB9F24DCC65E00E5A72B /* Coordinator.swift in Sources */,
 				A7F2FBC424DCD1C800E5A72B /* UserDefaults+Extension.swift in Sources */,
+				A7F2FC5024DFA0E900E5A72B /* UICollectionView+Extension.swift in Sources */,
 				A7F2FC2624DF797600E5A72B /* FontManager.swift in Sources */,
 				A7F2FBBD24DCD14100E5A72B /* CodableDataProtocol.swift in Sources */,
 				A7F2FBA424DCC6FB00E5A72B /* AppCoordinator.swift in Sources */,
 				A7F2FBB124DCC86300E5A72B /* AnimationStates.swift in Sources */,
+				A7F2FC4C24DF9F0000E5A72B /* TutorialViewCompoentData.swift in Sources */,
+				A7F2FC4A24DF9EE200E5A72B /* TutorialViewComponent.swift in Sources */,
+				A7F2FC4824DF9E1800E5A72B /* GenericBaseView.swift in Sources */,
 				A7F2FB9124DCC38400E5A72B /* Assembler+Extension.swift in Sources */,
 				A7F2FB9924DCC4BE00E5A72B /* FeedViewModel.swift in Sources */,
 				A7F2FBD324DDD8E600E5A72B /* InteractivePopGestureDelegate.swift in Sources */,
 				A7F2FB5B24DCBD9200E5A72B /* AppDelegate.swift in Sources */,
 				A7F2FBCC24DDD7D500E5A72B /* MainViewModel.swift in Sources */,
+				A7F2FC4324DF9CB300E5A72B /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
