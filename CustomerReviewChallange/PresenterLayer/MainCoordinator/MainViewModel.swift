@@ -10,6 +10,8 @@ import Foundation
 
 class MainViewModel: BaseViewModelDelegate {
     
+//    private let reviewUseCase:
+    
     init() {
         
     }

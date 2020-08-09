@@ -43,6 +43,7 @@ class TutorialViewComponent: GenericBaseView<TutorialViewComponentData> {
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             collectionView.topAnchor.constraint(equalTo: topAnchor),
             collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
+        
         ])
     }
     
