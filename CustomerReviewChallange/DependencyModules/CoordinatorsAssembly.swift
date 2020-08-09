@@ -15,5 +15,6 @@ class CoordinatorsAssembly: Assembly {
         container.autoregister(AppCoordinator.self, initializer: AppCoordinator.init).inObjectScope(.container)
         container.autoregister(SplashScreenCoordinator.self, initializer: SplashScreenCoordinator.init).inObjectScope(.weak)
         container.autoregister(MainCoordinator.self, initializer: MainCoordinator.init).inObjectScope(.container)
+        container.autoregister(TutorialCoordinator.self, initializer: TutorialCoordinator.init).inObjectScope(.weak)
     }
 }

@@ -30,7 +30,7 @@ public enum FontManager {
         
         typealias Value = UIFont?
         
-        var value: UIFont? {
+        public var value: UIFont? {
             switch self {
             case .Black(let size):
                 return UIFont(name: "SourceSansPro-Black", size: size)

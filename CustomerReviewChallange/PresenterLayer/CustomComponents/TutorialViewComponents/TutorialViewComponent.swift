@@ -28,6 +28,30 @@ class TutorialViewComponent: GenericBaseView<TutorialViewComponentData> {
         
     }()
     
+    override func addMajorFields() {
+        super.addMajorFields()
+        
+        addTutorialViewComponent()
+    }
+    
+    private func addTutorialViewComponent() {
+        addSubview(collectionView)
+        
+        NSLayoutConstraint.activate([
+        
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            collectionView.topAnchor.constraint(equalTo: topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
+        ])
+    }
+    
+    override func setupViews() {
+        super.setupViews()
+        
+        registerCell()
+    }
+    
     private func registerCell() {
         collectionView.genericRegisterCell(TutorialCollectionViewCell.self)
     }
@@ -37,11 +61,15 @@ class TutorialViewComponent: GenericBaseView<TutorialViewComponentData> {
 extension TutorialViewComponent: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TutorialCollectionViewCell.identifier, for: indexPath) as? TutorialCollectionViewCell else { fatalError() }
+        
+        return cell
+        
     }
     
 }

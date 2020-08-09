@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		6986C5C4E0E9A218BCFBEDAA /* Pods_CustomerReviewChallangeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525CBCF7D47B3EDB4E1A3E4C /* Pods_CustomerReviewChallangeTests.framework */; };
 		7A22D45E71193B95C2FA8791 /* Pods_CustomerReviewChallange_CustomerReviewChallangeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 157237F1F36886D43E53C4EC /* Pods_CustomerReviewChallange_CustomerReviewChallangeUITests.framework */; };
+		A71963B024E07E25002778B9 /* DynamicActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71963AF24E07E25002778B9 /* DynamicActionButton.swift */; };
+		A71963B224E07E65002778B9 /* DynamicActionButtonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71963B124E07E65002778B9 /* DynamicActionButtonData.swift */; };
+		A71963B424E08860002778B9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71963B324E08860002778B9 /* UIView+Extension.swift */; };
+		A743743D24E0225F00D088E1 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A743743C24E0225E00D088E1 /* Tutorial.storyboard */; };
+		A743743F24E0268A00D088E1 /* GenericDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A743743E24E0268A00D088E1 /* GenericDataProtocol.swift */; };
+		A743744124E026BF00D088E1 /* TutorialStaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A743744024E026BF00D088E1 /* TutorialStaticData.swift */; };
+		A743744524E029E200D088E1 /* StoryBoardInitiateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A743744424E029E200D088E1 /* StoryBoardInitiateDelegate.swift */; };
+		A743744724E02A4E00D088E1 /* StoryBoardIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A743744624E02A4E00D088E1 /* StoryBoardIdentifiers.swift */; };
 		A7F2FB5B24DCBD9200E5A72B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FB5A24DCBD9200E5A72B /* AppDelegate.swift */; };
 		A7F2FB6424DCBD9700E5A72B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7F2FB6324DCBD9700E5A72B /* Assets.xcassets */; };
 		A7F2FB6724DCBD9700E5A72B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7F2FB6524DCBD9700E5A72B /* LaunchScreen.storyboard */; };
@@ -119,6 +127,14 @@
 		3A55FBE8BB35F58D683C30B4 /* Pods-CustomerReviewChallange-CustomerReviewChallangeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerReviewChallange-CustomerReviewChallangeUITests.debug.xcconfig"; path = "Target Support Files/Pods-CustomerReviewChallange-CustomerReviewChallangeUITests/Pods-CustomerReviewChallange-CustomerReviewChallangeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		525CBCF7D47B3EDB4E1A3E4C /* Pods_CustomerReviewChallangeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomerReviewChallangeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7185C154DEF5D40CC2A4DCD4 /* Pods-CustomerReviewChallange-CustomerReviewChallangeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerReviewChallange-CustomerReviewChallangeUITests.release.xcconfig"; path = "Target Support Files/Pods-CustomerReviewChallange-CustomerReviewChallangeUITests/Pods-CustomerReviewChallange-CustomerReviewChallangeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A71963AF24E07E25002778B9 /* DynamicActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicActionButton.swift; sourceTree = "<group>"; };
+		A71963B124E07E65002778B9 /* DynamicActionButtonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicActionButtonData.swift; sourceTree = "<group>"; };
+		A71963B324E08860002778B9 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		A743743C24E0225E00D088E1 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		A743743E24E0268A00D088E1 /* GenericDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataProtocol.swift; sourceTree = "<group>"; };
+		A743744024E026BF00D088E1 /* TutorialStaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialStaticData.swift; sourceTree = "<group>"; };
+		A743744424E029E200D088E1 /* StoryBoardInitiateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardInitiateDelegate.swift; sourceTree = "<group>"; };
+		A743744624E02A4E00D088E1 /* StoryBoardIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardIdentifiers.swift; sourceTree = "<group>"; };
 		A7F2FB5724DCBD9200E5A72B /* CustomerReviewChallange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomerReviewChallange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F2FB5A24DCBD9200E5A72B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7F2FB6324DCBD9700E5A72B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -263,6 +279,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A71963AE24E07E13002778B9 /* ActionComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A71963AF24E07E25002778B9 /* DynamicActionButton.swift */,
+				A71963B124E07E65002778B9 /* DynamicActionButtonData.swift */,
+			);
+			path = ActionComponents;
+			sourceTree = "<group>";
+		};
 		A7F2FB4E24DCBD9100E5A72B = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +402,7 @@
 				A7F2FC3224DF7E8000E5A72B /* String+Extensions.swift */,
 				A7F2FC4224DF9CB300E5A72B /* UIColor+Extension.swift */,
 				A7F2FC4F24DFA0E900E5A72B /* UICollectionView+Extension.swift */,
+				A71963B324E08860002778B9 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -415,6 +441,8 @@
 				A7F2FBBC24DCD14100E5A72B /* CodableDataProtocol.swift */,
 				A7F2FBD224DDD8E600E5A72B /* InteractivePopGestureDelegate.swift */,
 				A7F2FC2724DF799700E5A72B /* GenericDescriptorProtocol.swift */,
+				A743743E24E0268A00D088E1 /* GenericDataProtocol.swift */,
+				A743744424E029E200D088E1 /* StoryBoardInitiateDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -450,6 +478,7 @@
 			children = (
 				A7F2FBB024DCC86300E5A72B /* AnimationStates.swift */,
 				A7F2FBBE24DCD16800E5A72B /* TutorialStates.swift */,
+				A743744624E02A4E00D088E1 /* StoryBoardIdentifiers.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -520,6 +549,8 @@
 				A7F2FBD724DF31B300E5A72B /* TutorialCoordinator.swift */,
 				A7F2FBD924DF31DF00E5A72B /* TutorialViewModel.swift */,
 				A7F2FC3E24DF99DE00E5A72B /* TutorialViewController.swift */,
+				A743743C24E0225E00D088E1 /* Tutorial.storyboard */,
+				A743744024E026BF00D088E1 /* TutorialStaticData.swift */,
 			);
 			path = TutorialCoordinator;
 			sourceTree = "<group>";
@@ -608,6 +639,7 @@
 		A7F2FC4424DF9D9800E5A72B /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
+				A71963AE24E07E13002778B9 /* ActionComponents */,
 				A7F2FC5124DFA1D700E5A72B /* TutorialViewComponents */,
 			);
 			path = CustomComponents;
@@ -761,6 +793,7 @@
 				A7F2FBFB24DF786E00E5A72B /* Metropolis-SemiBoldItalic.otf in Resources */,
 				A7F2FC0624DF786E00E5A72B /* Metropolis-SemiBold.otf in Resources */,
 				A7F2FB6424DCBD9700E5A72B /* Assets.xcassets in Resources */,
+				A743743D24E0225F00D088E1 /* Tutorial.storyboard in Resources */,
 				A7F2FC1B24DF795200E5A72B /* SourceSansPro-LightItalic.ttf in Resources */,
 				A7F2FBF624DF786E00E5A72B /* Metropolis-Bold.otf in Resources */,
 				A7F2FC0524DF786E00E5A72B /* Metropolis-LightItalic.otf in Resources */,
@@ -905,21 +938,26 @@
 				A7F2FC3F24DF99DE00E5A72B /* TutorialViewController.swift in Sources */,
 				A7F2FBD124DDD83F00E5A72B /* BaseViewController.swift in Sources */,
 				A7F2FBDC24DF37ED00E5A72B /* ManagerAssembly.swift in Sources */,
+				A71963B424E08860002778B9 /* UIView+Extension.swift in Sources */,
 				A7F2FBAB24DCC7F500E5A72B /* TutorialManager.swift in Sources */,
 				A7F2FC2824DF799700E5A72B /* GenericDescriptorProtocol.swift in Sources */,
 				A7F2FB9424DCC42500E5A72B /* ViewModelsAssembly.swift in Sources */,
 				A7F2FBA924DCC77600E5A72B /* NetworkConnectionManager.swift in Sources */,
 				A7F2FBA624DCC72500E5A72B /* AppViewModel.swift in Sources */,
+				A743744724E02A4E00D088E1 /* StoryBoardIdentifiers.swift in Sources */,
 				A7F2FC3A24DF87E600E5A72B /* SplashScreenCoordinator.swift in Sources */,
 				A7F2FBC724DDD75E00E5A72B /* ViewControllerUtilities.swift in Sources */,
 				A7F2FBBA24DCCBDA00E5A72B /* UserDefaultsGenericStructWrapper.swift in Sources */,
+				A743744124E026BF00D088E1 /* TutorialStaticData.swift in Sources */,
 				A7F2FC4624DF9DD000E5A72B /* BaseView.swift in Sources */,
 				A7F2FC4E24DFA07900E5A72B /* BaseCollectionViewCell.swift in Sources */,
 				A7F2FBC224DCD19A00E5A72B /* ConstantKeyStrings.swift in Sources */,
 				A7F2FBAE24DCC83900E5A72B /* CommonTypealises.swift in Sources */,
 				A7F2FBDA24DF31DF00E5A72B /* TutorialViewModel.swift in Sources */,
+				A71963B024E07E25002778B9 /* DynamicActionButton.swift in Sources */,
 				A7F2FBD524DDEF7100E5A72B /* CoordinatorsAssembly.swift in Sources */,
 				A7F2FBA124DCC69500E5A72B /* BaseViewModelDelegate.swift in Sources */,
+				A743744524E029E200D088E1 /* StoryBoardInitiateDelegate.swift in Sources */,
 				A7F2FC3D24DF887000E5A72B /* VisualContent.swift in Sources */,
 				A7F2FBD824DF31B300E5A72B /* TutorialCoordinator.swift in Sources */,
 				A7F2FC4124DF9C0600E5A72B /* ColorSpectrum.swift in Sources */,
@@ -935,9 +973,11 @@
 				A7F2FC4A24DF9EE200E5A72B /* TutorialViewComponent.swift in Sources */,
 				A7F2FC4824DF9E1800E5A72B /* GenericBaseView.swift in Sources */,
 				A7F2FB9124DCC38400E5A72B /* Assembler+Extension.swift in Sources */,
+				A71963B224E07E65002778B9 /* DynamicActionButtonData.swift in Sources */,
 				A7F2FB9924DCC4BE00E5A72B /* FeedViewModel.swift in Sources */,
 				A7F2FBD324DDD8E600E5A72B /* InteractivePopGestureDelegate.swift in Sources */,
 				A7F2FB5B24DCBD9200E5A72B /* AppDelegate.swift in Sources */,
+				A743743F24E0268A00D088E1 /* GenericDataProtocol.swift in Sources */,
 				A7F2FBCC24DDD7D500E5A72B /* MainViewModel.swift in Sources */,
 				A7F2FC4324DF9CB300E5A72B /* UIColor+Extension.swift in Sources */,
 			);

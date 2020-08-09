@@ -15,6 +15,7 @@ public enum LocalizableString {
     public enum LabelPrompts: GenericDescriptorProtocol {
         case sample
         case welcomeToChallenge
+        case next
 
         typealias Value = String
         
@@ -24,6 +25,8 @@ public enum LocalizableString {
                 return "sample".toLocalize()
             case .welcomeToChallenge:
                 return "welcomeToChallenge".toLocalize()
+            case .next:
+                return "next".toLocalize().uppercased()
             }
         }
     }

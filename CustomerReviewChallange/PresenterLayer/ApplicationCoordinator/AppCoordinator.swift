@@ -27,7 +27,7 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
         
     }
 
-    private lazy var finishSplashProcess: OnCompletedBool = { [weak self] completed in
+    private lazy var commonApplicationLauncher: OnCompletedBool = { [weak self] completed in
         if completed {
             self?.launchApplication()
         }
@@ -50,6 +50,7 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
         case .notLaunched:
             launchTutorialProcess()
         }
+
     }
     
     // MARK: - Main Screens Implementations -
@@ -70,7 +71,9 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
         guard let coordinator = AssemblerResolver.resolve(TutorialCoordinator.self) else { return }
         start(coordinator: coordinator)
         
-        ViewControllerUtils.setRootViewController(window: window, viewController: coordinator.navigationController, withAnimation: true)
+        coordinator.listenTutorialCoordinatorFinishes(completion: commonApplicationLauncher).disposed(by: disposeBag)
+        
+        ViewControllerUtils.setRootViewController(window: window, viewController: coordinator.viewContoller, withAnimation: true)
         
     }
     
@@ -80,7 +83,7 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
         guard let coordinator = AssemblerResolver.resolve(SplashScreenCoordinator.self) else { return }
         start(coordinator: coordinator)
         
-        coordinator.listenSplahCoordinatorFinishes(completion: finishSplashProcess).disposed(by: disposeBag)
+        coordinator.listenSplahCoordinatorFinishes(completion: commonApplicationLauncher).disposed(by: disposeBag)
         
         ViewControllerUtils.setRootViewController(window: window, viewController: coordinator.viewContoller, withAnimation: true)
         

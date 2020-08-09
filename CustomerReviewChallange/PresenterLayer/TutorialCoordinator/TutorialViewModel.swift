@@ -7,10 +7,29 @@
 //
 
 import UIKit
+import RxSwift
 
 class TutorialViewModel: BaseViewModelDelegate {
+    
+    private var actionButtonData = TutorialCoordinatorStaticData.actionButtonData
+    
     func dismissCoordinator() {
     }
     
+    func returnNumberOfPageItems() -> Int {
+        return TutorialCoordinatorStaticData.tutorialViewData.count
+    }
+    
+    func returnPageItem(indexPath: IndexPath) -> UIImage {
+        return TutorialCoordinatorStaticData.tutorialViewData[indexPath.row]
+    }
+    
+    func returnActionButtonData() -> DynamicActionButtonData {
+        return actionButtonData
+    }
+    
+    func subscribeActionButtonForNextAction(completion: @escaping OnDismissed) -> Disposable {
+        return actionButtonData.actionButtonFired.subscribe(onNext: completion)
+    }
 
 }

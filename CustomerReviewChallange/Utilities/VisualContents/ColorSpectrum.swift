@@ -8,9 +8,9 @@
 
 import UIKit
 
-struct ColorSpectrum {
+public struct ColorSpectrum {
     
-    static var yellowColor: UIColor {
+    public static var yellowColor: UIColor {
         if #available(iOS 11, *) {
             if let color = UIColor(named: "YellowColor") {
                 return color
@@ -19,9 +19,18 @@ struct ColorSpectrum {
         return UIColor(redVal: 255, greenVal: 197, blueVal: 0, alphaVal: 1)
     }
     
-    static var blackTextColor: UIColor {
+    public static var blackTextColor: UIColor {
         if #available(iOS 11, *) {
             if let color = UIColor(named: "BlackTextColor") {
+                return color
+            }
+        }
+        return UIColor(redVal: 30, greenVal: 27, blueVal: 35, alphaVal: 1)
+    }
+    
+    public static var appGreyBackground: UIColor {
+        if #available(iOS 11, *) {
+            if let color = UIColor(named: "AppGreyBackground") {
                 return color
             }
         }
