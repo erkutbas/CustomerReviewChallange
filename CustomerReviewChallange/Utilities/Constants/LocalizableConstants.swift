@@ -8,10 +8,13 @@
 
 import Foundation
 
+public typealias LabelPrompts = LocalizableString.LabelPrompts
+
 public enum LocalizableString {
     
     public enum LabelPrompts: GenericDescriptorProtocol {
         case sample
+        case welcomeToChallenge
 
         typealias Value = String
         
@@ -19,6 +22,8 @@ public enum LocalizableString {
             switch self {
             case .sample:
                 return "sample".toLocalize()
+            case .welcomeToChallenge:
+                return "welcomeToChallenge".toLocalize()
             }
         }
     }

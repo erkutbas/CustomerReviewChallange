@@ -46,7 +46,9 @@ class BaseViewController<T: BaseViewModelDelegate>: UIViewController, Interactiv
         }
     }
     
-    open func prepareViewControllerConfigurations() {}
+    open func prepareViewControllerConfigurations() {
+        view.backgroundColor = .white
+    }
     
     public static var identifier: String {
         return String(describing: self)

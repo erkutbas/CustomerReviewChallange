@@ -15,5 +15,6 @@ class ViewModelsAssembly: Assembly {
         container.autoregister(AppViewModel.self, initializer: AppViewModel.init).inObjectScope(.container)
         container.autoregister(FeedViewModel.self, initializer: FeedViewModel.init).inObjectScope(.weak)
         container.autoregister(MainViewModel.self, initializer: MainViewModel.init).inObjectScope(.weak)
+        container.autoregister(SplashScreenViewModel.self, initializer: SplashScreenViewModel.init).inObjectScope(.weak)
     }
 }

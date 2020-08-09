@@ -9,34 +9,34 @@
 import Foundation
 
 // MARK: - On Dismiss Closures -
-typealias OnDismissed = (() -> Void)
-typealias OnCompletedBool = ((Bool) -> Void)
+public typealias OnDismissed = (() -> Void)
+public typealias OnCompletedBool = ((Bool) -> Void)
 
 // MARK: - Void Operation Closures -
-typealias VoidOperation = (() -> Void)
+public typealias VoidOperation = (() -> Void)
 
 // MARK: - Button Tapped Closures -
-typealias ButtonPressed = ((Bool) -> Void)
+public typealias ButtonPressed = ((Bool) -> Void)
 
 // MARK: - Camera Dragging Closures -
-typealias CameraDragObverver = ((Bool) -> Void)
+public typealias CameraDragObverver = ((Bool) -> Void)
 
 // MARK: - Authentication Closures -
-typealias UserLoggedOut = (() -> Void)
+public typealias UserLoggedOut = (() -> Void)
 
 // MARK: - Server Side Closures -
-typealias SocketConnection = ((Bool) -> Void)
+public typealias SocketConnection = ((Bool) -> Void)
 
 // MARK: - Switch Button Closures -
-typealias SwitchButtonChanged  = ((Bool) -> Void)
+public typealias SwitchButtonChanged  = ((Bool) -> Void)
 
 // MARK: - TextField Closures -
-typealias TextFieldChangeCompletionHandler  = ((String) -> Void)
-typealias TextFieldFocusCompletionHandler = ((Bool) -> Void)
+public typealias TextFieldChangeCompletionHandler  = ((String) -> Void)
+public typealias TextFieldFocusCompletionHandler = ((Bool) -> Void)
 
 // MARK: - IndexPath Closures -
-typealias SelectedIndexPath = ((IndexPath) -> Void)
+public typealias SelectedIndexPath = ((IndexPath) -> Void)
 
 // MARK: - Animation Closures -
-typealias AnimationStateCompletion = ((AnimationStates) -> Void)
+public typealias AnimationStateCompletion = ((AnimationStates) -> Void)
 

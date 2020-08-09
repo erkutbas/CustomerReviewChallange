@@ -26,10 +26,16 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
         super.init(viewModel: appViewModel)
         
     }
+
+    private lazy var finishSplashProcess: OnCompletedBool = { [weak self] completed in
+        if completed {
+            self?.launchApplication()
+        }
+    }
     
     override func start() {
         window.makeKeyAndVisible()
-        launchApplication()
+        loadSplashScreen()
     }
     
     private func launchApplication() {
@@ -46,7 +52,7 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
         }
     }
     
-    
+    // MARK: - Main Screens Implementations -
     private func launchMainProcess() {
         removeChildCoordinators()
         
@@ -65,6 +71,18 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
         start(coordinator: coordinator)
         
         ViewControllerUtils.setRootViewController(window: window, viewController: coordinator.navigationController, withAnimation: true)
+        
+    }
+    
+    // MARK: - Splash Screen Implemententations -
+    private func loadSplashScreen() {
+        removeChildCoordinators()
+        guard let coordinator = AssemblerResolver.resolve(SplashScreenCoordinator.self) else { return }
+        start(coordinator: coordinator)
+        
+        coordinator.listenSplahCoordinatorFinishes(completion: finishSplashProcess).disposed(by: disposeBag)
+        
+        ViewControllerUtils.setRootViewController(window: window, viewController: coordinator.viewContoller, withAnimation: true)
         
     }
     
