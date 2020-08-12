@@ -10,7 +10,7 @@ import UIKit
 
 class FeedDetailComponent: GenericBaseView<FeedComponentViewData> {
     
-    private lazy var mainStakView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let temp = UIStackView(arrangedSubviews: [titleComponent, titleComponentDetail])
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.isUserInteractionEnabled = true
@@ -55,6 +55,7 @@ class FeedDetailComponent: GenericBaseView<FeedComponentViewData> {
         layer.shadowOffset = CGSize(width: 0, height: 3)
         layer.shadowRadius = 6
         layer.shadowOpacity = 0.6
+        clipsToBounds = true
     }
     
     override func addMajorFields() {
@@ -65,14 +66,13 @@ class FeedDetailComponent: GenericBaseView<FeedComponentViewData> {
     
     private func addMainStackView() {
         
-        addSubview(mainStakView)
+        addSubview(mainStackView)
         
         NSLayoutConstraint.activate([
             
-            mainStakView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            mainStakView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            mainStakView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            
+            mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            mainStackView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
         ])
     }
     
@@ -81,8 +81,8 @@ class FeedDetailComponent: GenericBaseView<FeedComponentViewData> {
         
         NSLayoutConstraint.activate([
             
-            starRatingComponent.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            starRatingComponent.topAnchor.constraint(equalTo: mainStakView.bottomAnchor, constant: 20),
+            starRatingComponent.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            starRatingComponent.topAnchor.constraint(equalTo: topAnchor, constant: 20),
             
         ])
         
