@@ -46,39 +46,6 @@ class MainViewController: BaseViewController<MainViewModel> {
         print("\(#function)")
     }
     
-    private func addView() {
-        view.addSubview(starVersionComponent)
-        
-        NSLayoutConstraint.activate([
-        
-            starVersionComponent.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            starVersionComponent.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            starVersionComponent.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-        
-        ])
-        
-        starVersionComponent.setData(data: StarVersionComponentData(rating: 4))
-    }
-    
-    private func addView2() {
-        feedComponentView = FeedComponentView()
-        feedComponentView.translatesAutoresizingMaskIntoConstraints = false
-        
-        view.addSubview(feedComponentView)
-        
-        NSLayoutConstraint.activate([
-        
-            feedComponentView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            feedComponentView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            feedComponentView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-//            feedComponentView.heightAnchor.constraint(equalToConstant: 400),
-        
-        ])
-        
-        feedComponentView.setData(data: FeedComponentViewData(titleComponentData: TitleComponentData(title: "Erkut Bas", subTitle: "20.01.01"), titleComponentDetailData: TitleComponentData(title: "Laga Luga", subTitle: "When I stand before God at the end of my life, I would hope that I would not have a single bit of talent left and could say, I used everything you gave me. When I stand before God at the end of my life, I would hope that I would not have a single bit of talent left and could say, I used everything you gave me."), rating: 4))
-        
-    }
-    
     private func addFeedSliderComponent() {
         feedSliderComponent = FeedSliderComponent(frame: .zero, delegate: self)
         feedSliderComponent.translatesAutoresizingMaskIntoConstraints = false
@@ -96,7 +63,7 @@ class MainViewController: BaseViewController<MainViewModel> {
         
         feedSliderComponent.listenSelectedData { [weak self](data) in
             guard let data = data as? FeedComponentViewData else { return }
-            print("data : \(data.titleComponentDetailData.title)")
+            self?.viewModel.fireForDetailFlow(data: data)
         }
     }
     

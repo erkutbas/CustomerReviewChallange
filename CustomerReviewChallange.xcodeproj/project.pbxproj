@@ -76,6 +76,9 @@
 		A719645024E35E35002778B9 /* DataLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A719644F24E35E35002778B9 /* DataLoadingState.swift */; };
 		A719645224E36827002778B9 /* HeadTitleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A719645124E36827002778B9 /* HeadTitleComponent.swift */; };
 		A719645424E368AB002778B9 /* TailTitleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A719645324E368AB002778B9 /* TailTitleComponent.swift */; };
+		A719645824E36BD3002778B9 /* FeedDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A719645724E36BD3002778B9 /* FeedDetailCoordinator.swift */; };
+		A719645A24E36BDE002778B9 /* FeedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A719645924E36BDE002778B9 /* FeedDetailViewModel.swift */; };
+		A719645C24E36BE8002778B9 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A719645B24E36BE8002778B9 /* FeedDetailViewController.swift */; };
 		A743743D24E0225F00D088E1 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A743743C24E0225E00D088E1 /* Tutorial.storyboard */; };
 		A743743F24E0268A00D088E1 /* GenericDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A743743E24E0268A00D088E1 /* GenericDataProtocol.swift */; };
 		A743744124E026BF00D088E1 /* TutorialStaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A743744024E026BF00D088E1 /* TutorialStaticData.swift */; };
@@ -88,7 +91,6 @@
 		A7F2FB7D24DCBD9800E5A72B /* CustomerReviewChallangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FB7C24DCBD9800E5A72B /* CustomerReviewChallangeUITests.swift */; };
 		A7F2FB9124DCC38400E5A72B /* Assembler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FB9024DCC38400E5A72B /* Assembler+Extension.swift */; };
 		A7F2FB9424DCC42500E5A72B /* ViewModelsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FB9324DCC42500E5A72B /* ViewModelsAssembly.swift */; };
-		A7F2FB9924DCC4BE00E5A72B /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FB9824DCC4BE00E5A72B /* FeedViewModel.swift */; };
 		A7F2FB9C24DCC64100E5A72B /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FB9B24DCC64100E5A72B /* BaseCoordinator.swift */; };
 		A7F2FB9F24DCC65E00E5A72B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FB9E24DCC65E00E5A72B /* Coordinator.swift */; };
 		A7F2FBA124DCC69500E5A72B /* BaseViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FBA024DCC69500E5A72B /* BaseViewModelDelegate.swift */; };
@@ -258,6 +260,9 @@
 		A719644F24E35E35002778B9 /* DataLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadingState.swift; sourceTree = "<group>"; };
 		A719645124E36827002778B9 /* HeadTitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadTitleComponent.swift; sourceTree = "<group>"; };
 		A719645324E368AB002778B9 /* TailTitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TailTitleComponent.swift; sourceTree = "<group>"; };
+		A719645724E36BD3002778B9 /* FeedDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailCoordinator.swift; sourceTree = "<group>"; };
+		A719645924E36BDE002778B9 /* FeedDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewModel.swift; sourceTree = "<group>"; };
+		A719645B24E36BE8002778B9 /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
 		A743743C24E0225E00D088E1 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		A743743E24E0268A00D088E1 /* GenericDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataProtocol.swift; sourceTree = "<group>"; };
 		A743744024E026BF00D088E1 /* TutorialStaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialStaticData.swift; sourceTree = "<group>"; };
@@ -276,7 +281,6 @@
 		A7F2FB7E24DCBD9800E5A72B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7F2FB9024DCC38400E5A72B /* Assembler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assembler+Extension.swift"; sourceTree = "<group>"; };
 		A7F2FB9324DCC42500E5A72B /* ViewModelsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelsAssembly.swift; sourceTree = "<group>"; };
-		A7F2FB9824DCC4BE00E5A72B /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		A7F2FB9B24DCC64100E5A72B /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		A7F2FB9E24DCC65E00E5A72B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A7F2FBA024DCC69500E5A72B /* BaseViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelDelegate.swift; sourceTree = "<group>"; };
@@ -606,6 +610,28 @@
 			path = StarVersionComponent;
 			sourceTree = "<group>";
 		};
+		A719645524E36BAA002778B9 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				A719645624E36BBA002778B9 /* FeedDetailCoodinator */,
+				A7F2FC3424DF868300E5A72B /* SplashScreenCoordinator */,
+				A7F2FBD624DF31A600E5A72B /* TutorialCoordinator */,
+				A7F2FBC824DDD7AE00E5A72B /* MainCoordinator */,
+				A7F2FBA224DCC6F200E5A72B /* ApplicationCoordinator */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		A719645624E36BBA002778B9 /* FeedDetailCoodinator */ = {
+			isa = PBXGroup;
+			children = (
+				A719645724E36BD3002778B9 /* FeedDetailCoordinator.swift */,
+				A719645924E36BDE002778B9 /* FeedDetailViewModel.swift */,
+				A719645B24E36BE8002778B9 /* FeedDetailViewController.swift */,
+			);
+			path = FeedDetailCoodinator;
+			sourceTree = "<group>";
+		};
 		A7F2FB4E24DCBD9100E5A72B = {
 			isa = PBXGroup;
 			children = (
@@ -686,12 +712,8 @@
 		A7F2FB8C24DCC1CE00E5A72B /* PresenterLayer */ = {
 			isa = PBXGroup;
 			children = (
+				A719645524E36BAA002778B9 /* Coordinators */,
 				A7F2FC4424DF9D9800E5A72B /* CustomComponents */,
-				A7F2FC3424DF868300E5A72B /* SplashScreenCoordinator */,
-				A7F2FBD624DF31A600E5A72B /* TutorialCoordinator */,
-				A7F2FBC824DDD7AE00E5A72B /* MainCoordinator */,
-				A7F2FBA224DCC6F200E5A72B /* ApplicationCoordinator */,
-				A7F2FB9524DCC48F00E5A72B /* FeedComponent */,
 			);
 			path = PresenterLayer;
 			sourceTree = "<group>";
@@ -745,14 +767,6 @@
 				A719641C24E31CFA002778B9 /* UseCaseAssembly.swift */,
 			);
 			path = DependencyModules;
-			sourceTree = "<group>";
-		};
-		A7F2FB9524DCC48F00E5A72B /* FeedComponent */ = {
-			isa = PBXGroup;
-			children = (
-				A7F2FB9824DCC4BE00E5A72B /* FeedViewModel.swift */,
-			);
-			path = FeedComponent;
 			sourceTree = "<group>";
 		};
 		A7F2FB9A24DCC62A00E5A72B /* Coordinators */ = {
@@ -1299,6 +1313,7 @@
 				A71963B424E08860002778B9 /* UIView+Extension.swift in Sources */,
 				A719643C24E342E5002778B9 /* VersionLabel.swift in Sources */,
 				A719644C24E356C8002778B9 /* MainViewSampleData.swift in Sources */,
+				A719645824E36BD3002778B9 /* FeedDetailCoordinator.swift in Sources */,
 				A719644224E3523E002778B9 /* FeedSliderComponentDelegate.swift in Sources */,
 				A7F2FBAB24DCC7F500E5A72B /* TutorialManager.swift in Sources */,
 				A71963E524E09B82002778B9 /* BaseRequest.swift in Sources */,
@@ -1340,6 +1355,8 @@
 				A7F2FB9F24DCC65E00E5A72B /* Coordinator.swift in Sources */,
 				A7F2FBC424DCD1C800E5A72B /* UserDefaults+Extension.swift in Sources */,
 				A7F2FC5024DFA0E900E5A72B /* UICollectionView+Extension.swift in Sources */,
+				A719645C24E36BE8002778B9 /* FeedDetailViewController.swift in Sources */,
+				A719645A24E36BDE002778B9 /* FeedDetailViewModel.swift in Sources */,
 				A71963DD24E09880002778B9 /* BackendRestClient.swift in Sources */,
 				A7F2FC2624DF797600E5A72B /* FontManager.swift in Sources */,
 				A719640D24E311D0002778B9 /* ConstantEndpoints.swift in Sources */,
@@ -1370,7 +1387,6 @@
 				A7F2FB9124DCC38400E5A72B /* Assembler+Extension.swift in Sources */,
 				A71963FF24E1C5D2002778B9 /* ReviewService.swift in Sources */,
 				A71963B224E07E65002778B9 /* DynamicActionButtonData.swift in Sources */,
-				A7F2FB9924DCC4BE00E5A72B /* FeedViewModel.swift in Sources */,
 				A71963E024E09880002778B9 /* ApiInterceptor.swift in Sources */,
 				A71963E724E09B89002778B9 /* BaseResponse.swift in Sources */,
 				A719644424E352E3002778B9 /* UITableView+Extensions.swift in Sources */,

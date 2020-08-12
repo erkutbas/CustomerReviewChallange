@@ -13,12 +13,12 @@ class MainViewModel: BaseViewModelDelegate {
     
     private let disposeBag = DisposeBag()
     
-    private var reviewUsecase: ReviewUsecase!
-    
-    private var reviewUsecaseCallBack: ReviewUsecaseCallBack = ReviewUsecaseCallBack()
-    
+    // rx objects
     private var dataLoadingState = PublishSubject<DataLoadingState>()
+    private var gotoFurtherCoordinators = PublishSubject<FeedComponentViewData>()
     
+    private var reviewUsecase: ReviewUsecase!
+    private var reviewUsecaseCallBack: ReviewUsecaseCallBack = ReviewUsecaseCallBack()
     private var feedEntryData: Array<Entry>?
     
     init(reviewUsecase: ReviewUsecase) {
@@ -71,6 +71,14 @@ class MainViewModel: BaseViewModelDelegate {
     func returnNumberOfItems() -> Int {
         guard let data = feedEntryData else { return 0 }
         return data.count
+    }
+    
+    func listenForDetailFlow(completion: @escaping (FeedComponentViewData) -> Void) -> Disposable {
+        return gotoFurtherCoordinators.subscribe(onNext: completion)
+    }
+    
+    func fireForDetailFlow(data: FeedComponentViewData) {
+        gotoFurtherCoordinators.onNext(data)
     }
     
     func dismissCoordinator() {

@@ -65,7 +65,12 @@ class FeedSliderComponent: BaseView {
     }
     
     private func bindRowSelection(data: GenericDataProtocol) {
+        userInteractionManager(active: true)
         genericDataCompletionHandler?(data)
+    }
+    
+    private func userInteractionManager(active: Bool) {
+        isUserInteractionEnabled = active
     }
     
     func listenSelectedData(completion: @escaping GenericDataProtocolCompletion) {
@@ -81,6 +86,7 @@ class FeedSliderComponent: BaseView {
             tableView.reloadData()
         }
     }
+    
 }
 
 // Mark: TableView Delegate, Datasources
@@ -102,6 +108,7 @@ extension FeedSliderComponent: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? FeedComponentCell else { return }
+        userInteractionManager(active: false)
         cell.subscribeToSelectedRow(completion: bindRowSelection(data:))
     }
     
