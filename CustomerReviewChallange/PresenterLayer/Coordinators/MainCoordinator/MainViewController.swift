@@ -101,7 +101,6 @@ class MainViewController: BaseViewController<MainViewModel> {
         ])
         
         ratingSelectionComponent.listenSelectedRating { [weak self](selectedRating) in
-            print("Rating : \(selectedRating)")
             self?.ratingSelectionComponentActivationManager(active: false, animated: true)
             self?.viewModel.filterByStar(rating: selectedRating)
         }.disposed(by: disposeBag)

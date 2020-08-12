@@ -30,8 +30,6 @@ class ApiManager: HttpClientInterface {
     
     func executeRequest<R>(urlRequestConvertible: URLRequestConvertible) -> PrimitiveSequence<SingleTrait, R> where R: CodableDataProtocol {
         
-        print("APIMANAGER EXECUTED")
-        
         return Single.create { [weak self] (single) -> Disposable in
             
             self?.session.request(urlRequestConvertible).validate().response(completionHandler: { (alamofireResponseData) in
@@ -43,8 +41,6 @@ class ApiManager: HttpClientInterface {
     }
     
     func responseParser<R>(alamofireResponseData: AFDataResponse<Data?>, single: (SingleEvent<R>) -> Void) where R: CodableDataProtocol {
-        
-        print("responseParser executed")
         
         switch alamofireResponseData.result {
         case .failure(let error):
