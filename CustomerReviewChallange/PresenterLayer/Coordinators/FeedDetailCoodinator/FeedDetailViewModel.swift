@@ -22,6 +22,10 @@ class FeedDetailViewModel: BaseViewModelDelegate {
     func subscribeCloseFeedDetailObservable(completion: @escaping OnDismissed) -> Disposable {
         return dismissFeedCoordinator.subscribe(onNext: completion)
     }
+    
+    func returnData() -> FeedComponentViewData {
+        return data
+    }
 
     func dismissCoordinator() {
         dismissFeedCoordinator.onNext(())

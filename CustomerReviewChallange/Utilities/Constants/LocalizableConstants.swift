@@ -17,6 +17,8 @@ public enum LocalizableString {
         case welcomeToChallenge
         case next
         case version
+        case feedList
+        case feedDetail
 
         typealias Value = String
         
@@ -30,6 +32,10 @@ public enum LocalizableString {
                 return "next".toLocalize().uppercased()
             case .version:
                 return "version".toLocalize()
+            case .feedList:
+                return "feedList".toLocalize()
+            case .feedDetail:
+                return "feedDetail".toLocalize()
             }
         }
     }

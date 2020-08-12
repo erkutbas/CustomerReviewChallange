@@ -11,6 +11,10 @@ import RxSwift
 
 class MainViewController: BaseViewController<MainViewModel> {
     
+    override var viewTitle: String? {
+        return LabelPrompts.feedList.value
+    }
+    
     private let disposeBag = DisposeBag()
     
     private var activityIndicator: UIActivityIndicatorView!

@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class BaseViewController<T: BaseViewModelDelegate>: UIViewController, InteractivePopGestureDelegate {
+class BaseViewController<T: BaseViewModelDelegate>: UIViewController, InteractivePopGestureDelegate, ViewControllerTypeProtocol {
+    
+    var viewTitle: String? { return nil }
     
     var initialInteractivePopGestureRecognizerDelegate: UIGestureRecognizerDelegate?
 
@@ -48,10 +50,15 @@ class BaseViewController<T: BaseViewModelDelegate>: UIViewController, Interactiv
     
     open func prepareViewControllerConfigurations() {
         view.backgroundColor = .white
+        setViewControllerName()
     }
     
     public static var identifier: String {
         return String(describing: self)
+    }
+    
+    private func setViewControllerName() {
+        title = viewTitle
     }
     
 }

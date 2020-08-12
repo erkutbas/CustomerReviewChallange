@@ -84,6 +84,8 @@
 		A743744124E026BF00D088E1 /* TutorialStaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A743744024E026BF00D088E1 /* TutorialStaticData.swift */; };
 		A743744524E029E200D088E1 /* StoryBoardInitiateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A743744424E029E200D088E1 /* StoryBoardInitiateDelegate.swift */; };
 		A743744724E02A4E00D088E1 /* StoryBoardIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A743744624E02A4E00D088E1 /* StoryBoardIdentifiers.swift */; };
+		A78A109F24E37532006A69F6 /* ViewControllerTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78A109E24E37532006A69F6 /* ViewControllerTypeProtocol.swift */; };
+		A78A10A224E376D3006A69F6 /* FeedDetailComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78A10A124E376D3006A69F6 /* FeedDetailComponent.swift */; };
 		A7F2FB5B24DCBD9200E5A72B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2FB5A24DCBD9200E5A72B /* AppDelegate.swift */; };
 		A7F2FB6424DCBD9700E5A72B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7F2FB6324DCBD9700E5A72B /* Assets.xcassets */; };
 		A7F2FB6724DCBD9700E5A72B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7F2FB6524DCBD9700E5A72B /* LaunchScreen.storyboard */; };
@@ -268,6 +270,8 @@
 		A743744024E026BF00D088E1 /* TutorialStaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialStaticData.swift; sourceTree = "<group>"; };
 		A743744424E029E200D088E1 /* StoryBoardInitiateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardInitiateDelegate.swift; sourceTree = "<group>"; };
 		A743744624E02A4E00D088E1 /* StoryBoardIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardIdentifiers.swift; sourceTree = "<group>"; };
+		A78A109E24E37532006A69F6 /* ViewControllerTypeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTypeProtocol.swift; sourceTree = "<group>"; };
+		A78A10A124E376D3006A69F6 /* FeedDetailComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailComponent.swift; sourceTree = "<group>"; };
 		A7F2FB5724DCBD9200E5A72B /* CustomerReviewChallange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomerReviewChallange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F2FB5A24DCBD9200E5A72B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7F2FB6324DCBD9700E5A72B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -632,6 +636,14 @@
 			path = FeedDetailCoodinator;
 			sourceTree = "<group>";
 		};
+		A78A10A024E376C3006A69F6 /* FeedDetailComponent */ = {
+			isa = PBXGroup;
+			children = (
+				A78A10A124E376D3006A69F6 /* FeedDetailComponent.swift */,
+			);
+			path = FeedDetailComponent;
+			sourceTree = "<group>";
+		};
 		A7F2FB4E24DCBD9100E5A72B = {
 			isa = PBXGroup;
 			children = (
@@ -787,6 +799,7 @@
 				A7F2FC2724DF799700E5A72B /* GenericDescriptorProtocol.swift */,
 				A743743E24E0268A00D088E1 /* GenericDataProtocol.swift */,
 				A743744424E029E200D088E1 /* StoryBoardInitiateDelegate.swift */,
+				A78A109E24E37532006A69F6 /* ViewControllerTypeProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -993,6 +1006,7 @@
 		A7F2FC4424DF9D9800E5A72B /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
+				A78A10A024E376C3006A69F6 /* FeedDetailComponent */,
 				A719643624E340FB002778B9 /* StarVersionComponent */,
 				A719642A24E33EBF002778B9 /* StarRatingView */,
 				A719642524E33B53002778B9 /* TitleComponent */,
@@ -1380,6 +1394,7 @@
 				A71963DF24E09880002778B9 /* ApiAdapter.swift in Sources */,
 				A7F2FC4824DF9E1800E5A72B /* GenericBaseView.swift in Sources */,
 				A719642724E33B89002778B9 /* TitleComponent.swift in Sources */,
+				A78A109F24E37532006A69F6 /* ViewControllerTypeProtocol.swift in Sources */,
 				A71963B824E09482002778B9 /* ReviewData.swift in Sources */,
 				A719643E24E3432E002778B9 /* DynamicLabelDataProtocol.swift in Sources */,
 				A719641B24E31C96002778B9 /* RepositoryAssembly.swift in Sources */,
@@ -1399,6 +1414,7 @@
 				A719641724E31732002778B9 /* UseCaseCallBackInteractor.swift in Sources */,
 				A71963EB24E09C67002778B9 /* DataModel.swift in Sources */,
 				A71963CE24E097A5002778B9 /* ApiConnectionErrorType.swift in Sources */,
+				A78A10A224E376D3006A69F6 /* FeedDetailComponent.swift in Sources */,
 				A743743F24E0268A00D088E1 /* GenericDataProtocol.swift in Sources */,
 				A71963C624E095C5002778B9 /* SingleUseCase.swift in Sources */,
 				A719641424E316FF002778B9 /* ReviewUsecaseCallBack.swift in Sources */,

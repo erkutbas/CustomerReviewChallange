@@ -78,4 +78,9 @@ class TitleComponent: GenericBaseView<TitleComponentData> {
         subtitleLabel.numberOfLines = data.subTitleAlignmentData.numberOfLines
     }
     
+    func setSubTitleAlignmentData(labelAlignmentData: LabelAlignmentData) {
+        subtitleLabel.lineBreakMode = labelAlignmentData.lineBreakMode
+        subtitleLabel.numberOfLines = labelAlignmentData.numberOfLines
+    }
+    
 }
