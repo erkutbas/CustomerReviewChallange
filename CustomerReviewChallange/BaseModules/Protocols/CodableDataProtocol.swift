@@ -8,4 +8,4 @@
 
 import Foundation
 
-protocol CodableDataProtocol: Codable {}
+public protocol CodableDataProtocol: Codable {}

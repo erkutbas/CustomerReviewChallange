@@ -46,6 +46,13 @@ public class BaseCoordinator<T: BaseViewModelDelegate>: NSObject, Coordinator {
         }
     }
     
+    public func didFinish(coordinator: Coordinator, completion: OnDismissed) {
+        if let index = self.childCoordinators.firstIndex(where: { $0 === coordinator }) {
+            self.childCoordinators.remove(at: index)
+            completion()
+        }
+    }
+    
     public static var identifier: String {
         return String(describing: self)
     }

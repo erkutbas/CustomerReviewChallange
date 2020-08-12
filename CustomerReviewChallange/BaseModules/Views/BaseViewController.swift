@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class BaseViewController<T: BaseViewModelDelegate>: UIViewController, InteractivePopGestureDelegate {
+class BaseViewController<T: BaseViewModelDelegate>: UIViewController, InteractivePopGestureDelegate, ViewControllerTypeProtocol {
+    
+    var viewTitle: String? { return nil }
     
     var initialInteractivePopGestureRecognizerDelegate: UIGestureRecognizerDelegate?
 
@@ -22,20 +24,17 @@ class BaseViewController<T: BaseViewModelDelegate>: UIViewController, Interactiv
     
     open override func viewDidLoad() {
         super.viewDidLoad()
-        print("\(#function)")
         setInitialInteractivePopGestureRecognizerDelegate()
         prepareViewControllerConfigurations()
     }
     
     open override func viewWillAppear(_ animated: Bool) {
-        print("\(#function)")
         super.viewWillAppear(animated)
         resetInteractivePopGestureForNavigationController()
     }
     
     open override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("\(#function)")
         assignInteractivePopGestureToNavigationController()
     }
     
@@ -46,10 +45,17 @@ class BaseViewController<T: BaseViewModelDelegate>: UIViewController, Interactiv
         }
     }
     
-    open func prepareViewControllerConfigurations() {}
+    open func prepareViewControllerConfigurations() {
+        view.backgroundColor = .white
+        setViewControllerName()
+    }
     
     public static var identifier: String {
         return String(describing: self)
+    }
+    
+    private func setViewControllerName() {
+        title = viewTitle
     }
     
 }
