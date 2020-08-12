@@ -7,17 +7,18 @@
 //
 
 import Foundation
+import RxSwift
 
-class ReviewUsecase: SingleUseCase<ReviewRequest, ReviewReponse> {
+class ReviewUsecase: SingleUseCase<ReviewRequest, ReviewData> {
     
-    private let repository: AuthApiRepositoryInteractor
+    private let repository: ReviewRepositoryInterface
     
-    init(repository: AuthApiRepositoryInteractor) {
+    init(repository: ReviewRepositoryInterface) {
         self.repository = repository
     }
     
-    override func generateUseCase(parameter: LoginRequest) -> Single<ProfileResponse>? {
-        return repository.login(request: parameter)
+    override func generateUseCase(parameter: ReviewRequest) -> Single<ReviewData>? {
+        return repository.getReviewData(request: parameter)
     }
     
     deinit {

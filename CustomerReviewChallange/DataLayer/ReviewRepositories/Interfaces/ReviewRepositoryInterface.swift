@@ -11,6 +11,6 @@ import RxSwift
 
 protocol ReviewRepositoryInterface {
     
-    func getReviewData(request: ReviewRequest) -> Single<ReviewReponse> 
+    func getReviewData(request: ReviewRequest) -> Single<ReviewData>
     
 }

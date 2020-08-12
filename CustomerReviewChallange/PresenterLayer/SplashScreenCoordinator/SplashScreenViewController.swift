@@ -24,7 +24,7 @@ class SplashScreenViewController: BaseViewController<SplashScreenViewModel> {
         let temp = UILabel()
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.isUserInteractionEnabled = false
-        temp.font = SourceSansPro.SemiBold(20).value
+        temp.font = SourceSansPro.Regular(18).value
         temp.text = LabelPrompts.welcomeToChallenge.value
         temp.textAlignment = .center
         temp.contentMode = .center

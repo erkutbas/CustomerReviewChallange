@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - ReviewResponse
-class ReviewData: CodableDataProtocol {
+public class ReviewData: CodableDataProtocol {
     let feed: Feed?
 
     init(feed: Feed?) {
@@ -19,7 +19,7 @@ class ReviewData: CodableDataProtocol {
 }
 
 // MARK: - Feed
-class Feed: Codable {
+public class Feed: Codable {
     let author: FeedAuthor?
     let entry: [Entry]?
     let updated, rights, title, icon: Icon?
@@ -39,7 +39,7 @@ class Feed: Codable {
 }
 
 // MARK: - FeedAuthor
-class FeedAuthor: Codable {
+public class FeedAuthor: Codable {
     let name, uri: Icon?
 
     init(name: Icon?, uri: Icon?) {
@@ -49,7 +49,7 @@ class FeedAuthor: Codable {
 }
 
 // MARK: - Icon
-class Icon: Codable {
+public class Icon: Codable {
     let label: String?
 
     init(label: String?) {
@@ -58,7 +58,7 @@ class Icon: Codable {
 }
 
 // MARK: - Entry
-class Entry: Codable {
+public class Entry: Codable {
     let author: EntryAuthor?
     let imVersion, imRating, id, title: Icon?
     let content: Content?
@@ -92,7 +92,7 @@ class Entry: Codable {
 }
 
 // MARK: - EntryAuthor
-class EntryAuthor: Codable {
+public class EntryAuthor: Codable {
     let uri, name: Icon?
     let label: String?
 
@@ -104,7 +104,7 @@ class EntryAuthor: Codable {
 }
 
 // MARK: - Content
-class Content: Codable {
+public class Content: Codable {
     let label: String?
     let attributes: ContentAttributes?
 
@@ -115,7 +115,7 @@ class Content: Codable {
 }
 
 // MARK: - ContentAttributes
-class ContentAttributes: Codable {
+public class ContentAttributes: Codable {
     let type: TypeEnum?
 
     init(type: TypeEnum?) {
@@ -123,12 +123,12 @@ class ContentAttributes: Codable {
     }
 }
 
-enum TypeEnum: String, Codable {
+public  enum TypeEnum: String, Codable {
     case text = "text"
 }
 
 // MARK: - IMContentType
-class IMContentType: Codable {
+public class IMContentType: Codable {
     let attributes: IMContentTypeAttributes?
 
     init(attributes: IMContentTypeAttributes?) {
@@ -137,7 +137,7 @@ class IMContentType: Codable {
 }
 
 // MARK: - IMContentTypeAttributes
-class IMContentTypeAttributes: Codable {
+public class IMContentTypeAttributes: Codable {
     let term: Term?
     let label: Label?
 
@@ -147,16 +147,16 @@ class IMContentTypeAttributes: Codable {
     }
 }
 
-enum Label: String, Codable {
+public enum Label: String, Codable {
     case programma = "Programma"
 }
 
-enum Term: String, Codable {
+public enum Term: String, Codable {
     case application = "Application"
 }
 
 // MARK: - EntryLink
-class EntryLink: Codable {
+public class EntryLink: Codable {
     let attributes: PurpleAttributes?
 
     init(attributes: PurpleAttributes?) {
@@ -165,7 +165,7 @@ class EntryLink: Codable {
 }
 
 // MARK: - PurpleAttributes
-class PurpleAttributes: Codable {
+public class PurpleAttributes: Codable {
     let rel: Rel?
     let href: String?
 
@@ -175,12 +175,12 @@ class PurpleAttributes: Codable {
     }
 }
 
-enum Rel: String, Codable {
+public enum Rel: String, Codable {
     case related = "related"
 }
 
 // MARK: - LinkElement
-class LinkElement: Codable {
+public class LinkElement: Codable {
     let attributes: FluffyAttributes?
 
     init(attributes: FluffyAttributes?) {
@@ -189,7 +189,7 @@ class LinkElement: Codable {
 }
 
 // MARK: - FluffyAttributes
-class FluffyAttributes: Codable {
+public class FluffyAttributes: Codable {
     let rel, type: String?
     let href: String?
 

@@ -40,3 +40,5 @@ public typealias SelectedIndexPath = ((IndexPath) -> Void)
 // MARK: - Animation Closures -
 public typealias AnimationStateCompletion = ((AnimationStates) -> Void)
 
+// MARK: - Data Loading States -
+public typealias DataLoadingStateCompletion = ((DataLoadingState) -> Void)

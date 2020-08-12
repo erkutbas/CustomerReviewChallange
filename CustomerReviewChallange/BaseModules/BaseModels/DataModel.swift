@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DataModel<T: CodableDataProtocol>: BaseResponseProtocol {
+public class DataModel<T: CodableDataProtocol>: BaseResponseProtocol {
     
     var returnCode: Int?
     var returnMessage: String?

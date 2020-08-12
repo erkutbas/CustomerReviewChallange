@@ -11,7 +11,6 @@ import UIKit
 // MARK: - Animation Extensions -
 extension UIView {
 
-    /// Description: Creates pressed animation like button
     public func startPressedAnimationCommon(withDuration: CGFloat = 0.3, completion: @escaping (_ finish: Bool) -> Void) {
 
         self.transform = CGAffineTransform(scaleX: 0.95, y: 0.95) // buton view kucultulur

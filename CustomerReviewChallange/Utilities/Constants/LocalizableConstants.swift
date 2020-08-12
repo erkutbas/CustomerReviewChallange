@@ -16,6 +16,7 @@ public enum LocalizableString {
         case sample
         case welcomeToChallenge
         case next
+        case version
 
         typealias Value = String
         
@@ -27,6 +28,8 @@ public enum LocalizableString {
                 return "welcomeToChallenge".toLocalize()
             case .next:
                 return "next".toLocalize().uppercased()
+            case .version:
+                return "version".toLocalize()
             }
         }
     }

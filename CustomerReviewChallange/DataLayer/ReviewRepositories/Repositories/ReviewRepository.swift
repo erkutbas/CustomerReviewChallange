@@ -7,12 +7,22 @@
 //
 
 import Foundation
+import RxSwift
 
 class ReviewRepository: ReviewRepositoryInterface {
-    func getReviewData(request: ReviewRequest) -> Single<ReviewReponse> {
-        
+    
+    private let reviewApiRemote: ReviewApiRemoteInterface!
+    
+    init(reviewApiRemote: ReviewApiRemoteInterface) {
+        self.reviewApiRemote = reviewApiRemote
     }
     
+    func getReviewData(request: ReviewRequest) -> Single<ReviewData> {
+        return reviewApiRemote.getReviewRemote(request: request)
+    }
     
-    
+    deinit {
+        print("DEINIT ReviewRepository")
+    }
+
 }

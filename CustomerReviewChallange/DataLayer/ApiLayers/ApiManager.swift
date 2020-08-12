@@ -64,6 +64,7 @@ class ApiManager: HttpClientInterface {
             }
         case .success(let data):
             if let data = data {
+                
                 do {
                     let dataDecoded = try jsonDecoder.decode(R.self, from: data)
                     single(.success(dataDecoded))

@@ -37,4 +37,13 @@ public struct ColorSpectrum {
         return UIColor(redVal: 30, greenVal: 27, blueVal: 35, alphaVal: 1)
     }
     
+    public static var cellBackground: UIColor {
+        if #available(iOS 11, *) {
+            if let color = UIColor(named: "CellBackground") {
+                return color
+            }
+        }
+        return UIColor(redVal: 53, greenVal: 58, blueVal: 80, alphaVal: 1)
+    }
+    
 }
