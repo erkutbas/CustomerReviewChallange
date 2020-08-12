@@ -94,7 +94,7 @@ class FeedDetailComponent: GenericBaseView<FeedComponentViewData> {
     }
     
     private func setDataIntoViews() {
-        guard let data = returnData() as? FeedComponentViewData else { return }
+        guard let data = returnData() else { return }
         titleComponent.setData(data: data.titleComponentData)
         titleComponentDetail.setData(data: data.titleComponentDetailData)
         starRatingComponent.setStarRatingExternally(index: data.rating)

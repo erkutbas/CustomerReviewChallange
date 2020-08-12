@@ -25,15 +25,18 @@ class MainViewController: BaseViewController<MainViewModel> {
         return temp
     }()
 
-    private var feedComponentView: FeedComponentView!
-    
     private var feedSliderComponent: FeedSliderComponent!
+    private var ratingSelectionComponent: RatingSelectionComponent!
+    private var headerViewComponent: HeaderViewComponent!
 
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
         
+        addHeaderViewComponent()
         addFeedSliderComponent()
         addActivityIndicator()
+        listenFilterOperation()
+        addRatingSelection()
         
         subsribeViewModelDataLoadingProcess()
         
@@ -43,11 +46,20 @@ class MainViewController: BaseViewController<MainViewModel> {
             self?.viewModel.executeReviewUsecase()
         }
         
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 10) { [weak self] in
+            self?.viewModel.executeReviewUsecase()
+        }
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("\(#function)")
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     private func addFeedSliderComponent() {
@@ -60,7 +72,7 @@ class MainViewController: BaseViewController<MainViewModel> {
         
             feedSliderComponent.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             feedSliderComponent.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            feedSliderComponent.topAnchor.constraint(equalTo: view.topAnchor),
+            feedSliderComponent.topAnchor.constraint(equalTo: headerViewComponent.bottomAnchor, constant: 5),
             feedSliderComponent.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         
         ])
@@ -71,7 +83,57 @@ class MainViewController: BaseViewController<MainViewModel> {
         }
     }
     
-    func addActivityIndicator() {
+    private func addRatingSelection() {
+        ratingSelectionComponent = RatingSelectionComponent()
+        ratingSelectionComponent.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(ratingSelectionComponent)
+        
+        ratingSelectionComponentActivationManager(active: false)
+
+        NSLayoutConstraint.activate([
+        
+            ratingSelectionComponent.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            ratingSelectionComponent.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            ratingSelectionComponent.topAnchor.constraint(equalTo: view.topAnchor),
+            ratingSelectionComponent.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        
+        ])
+        
+        ratingSelectionComponent.listenSelectedRating { [weak self](selectedRating) in
+            print("Rating : \(selectedRating)")
+            self?.ratingSelectionComponentActivationManager(active: false, animated: true)
+            self?.viewModel.filterByStar(rating: selectedRating)
+        }.disposed(by: disposeBag)
+    }
+    
+    private func addHeaderViewComponent() {
+        headerViewComponent =  HeaderViewComponent(frame: .zero, delegate: self)
+        headerViewComponent.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(headerViewComponent)
+        
+        NSLayoutConstraint.activate([
+        
+            headerViewComponent.topAnchor.constraint(equalTo: view.topAnchor, constant: UIApplication.shared.returnTopPaddingHeight()),
+            headerViewComponent.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            headerViewComponent.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+        ])
+    }
+    
+    private func ratingSelectionComponentActivationManager(active: Bool, animated: Bool = false) {
+        if animated {
+            UIView.transition(with: self.view, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak self] in
+                self?.ratingSelectionComponent.alpha = active ? 1 : 0
+            })
+        } else {
+            ratingSelectionComponent.alpha = active ? 1 : 0
+        }
+        
+    }
+    
+    private func addActivityIndicator() {
         activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.hidesWhenStopped = true
@@ -86,7 +148,7 @@ class MainViewController: BaseViewController<MainViewModel> {
         ])
     }
     
-    func activityIndicatorManager(active: Bool) {
+    private func activityIndicatorManager(active: Bool) {
         active ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
     }
     
@@ -98,10 +160,17 @@ class MainViewController: BaseViewController<MainViewModel> {
             case .loaded:
                 self?.activityIndicatorManager(active: false)
                 self?.feedSliderComponent.reloadFeedSlider()
+                self?.headerViewComponent.reloadHeader()
             case .loading:
                 self?.activityIndicatorManager(active: true)
             }
         }.disposed(by: disposeBag)
+    }
+    
+    private func listenFilterOperation() {
+        headerViewComponent.filterView.subscribeViewTapped { [weak self] in
+            self?.ratingSelectionComponentActivationManager(active: true, animated: true)
+        }
     }
     
     deinit {
@@ -109,7 +178,9 @@ class MainViewController: BaseViewController<MainViewModel> {
     }
 }
 
+// Mark: - FeedSliderComponentDelegate -
 extension MainViewController: FeedSliderComponentDelegate {
+    
     func getItem(index: Int) -> GenericDataProtocol? {
         return viewModel.returnData(index: index)
     }
@@ -118,5 +189,21 @@ extension MainViewController: FeedSliderComponentDelegate {
         return viewModel.returnNumberOfItems()
     }
     
+    func refreshData() {
+        viewModel.executeReviewUsecase()
+    }
 
+}
+
+// Mark: - HeaderViewComponentDelegate -
+extension MainViewController: HeaderViewComponentDelegate {
+    
+    func getHeaderItem(index: Int) -> GenericCellTypeProtocol? {
+        return viewModel.getOccuringData(index: index)
+    }
+    
+    func getNumberOfHeaderItem() -> Int {
+        return viewModel.getOccuringDataCount()
+    }
+    
 }

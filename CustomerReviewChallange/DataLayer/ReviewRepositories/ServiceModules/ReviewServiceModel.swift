@@ -15,7 +15,7 @@ class ReviewServiceModel: ApiServiceProvider<ReviewRequest> {
     }
     
     deinit {
-        print("DEINIT LoginServiceModule")
+        print("DEINIT ReviewServiceModel")
     }
     
 }

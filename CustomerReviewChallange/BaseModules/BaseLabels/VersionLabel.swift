@@ -30,7 +30,7 @@ class VersionLabel: BaseDynamicStringLabel {
         
         var attributedSring = NSMutableAttributedString()
 
-        attributedSring = NSMutableAttributedString(string: "\(LabelPrompts.version.value) :\(data.returnVersion())", attributes: [NSAttributedString.Key.font : SourceSansPro.Light(fonts[0]).value, NSAttributedString.Key.foregroundColor: UIColor.white])
+        attributedSring = NSMutableAttributedString(string: "\(LabelPrompts.version.value) :\(data.returnVersion())", attributes: [NSAttributedString.Key.font : SourceSansPro.Light(fonts[0]).value!, NSAttributedString.Key.foregroundColor: UIColor.white])
         
         attributedText = attributedSring
         

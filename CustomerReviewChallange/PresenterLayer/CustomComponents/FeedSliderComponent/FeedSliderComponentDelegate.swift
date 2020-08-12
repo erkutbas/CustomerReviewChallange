@@ -10,5 +10,7 @@ import Foundation
 
 protocol FeedSliderComponentDelegate: AnyObject {
     func getItem(index: Int) -> GenericDataProtocol?
-    func getNumberOfItem() -> Int 
+    func getNumberOfItem() -> Int
+    func refreshData()
+    
 }

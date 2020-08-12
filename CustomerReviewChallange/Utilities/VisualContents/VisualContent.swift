@@ -12,6 +12,7 @@ import UIKit
 public enum VisualContents: GenericDescriptorProtocol {
     
     case sampleAppIcon
+    case filterIcon
     case tutorial1
     case tutorial2
     case tutorial3
@@ -23,6 +24,8 @@ public enum VisualContents: GenericDescriptorProtocol {
         switch self {
         case .sampleAppIcon:
             return UIImage(imageLiteralResourceName: "SampleIcon")
+        case .filterIcon:
+            return UIImage(imageLiteralResourceName: "filterIcon")
         case .tutorial1:
             return UIImage(imageLiteralResourceName: "tutorial1")
         case .tutorial2:

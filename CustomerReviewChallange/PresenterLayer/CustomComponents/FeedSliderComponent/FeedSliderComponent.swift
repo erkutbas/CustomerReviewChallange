@@ -13,7 +13,9 @@ class FeedSliderComponent: BaseView {
     private weak var delegate: FeedSliderComponentDelegate?
     
     private var genericDataCompletionHandler: GenericDataProtocolCompletion?
-
+    
+    private var refreshControl: UIRefreshControl!
+    
     lazy var tableView: UITableView = {
         let temp = UITableView(frame: .zero, style: .plain)
         temp.translatesAutoresizingMaskIntoConstraints = false
@@ -40,6 +42,7 @@ class FeedSliderComponent: BaseView {
     override func addMajorFields() {
         super.addMajorFields()
         addTableView()
+        addRefreshControlToTableView()
     }
     
     override func setupViews() {
@@ -81,10 +84,26 @@ class FeedSliderComponent: BaseView {
         if animated {
             UIView.transition(with: self, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak self] in
                 self?.tableView.reloadData()
-            })
+            }) { [weak self](finish) in
+                if finish {
+                    self?.refreshControl.endRefreshing()
+                }
+            }
         } else {
             tableView.reloadData()
+            refreshControl.endRefreshing()
         }
+    }
+    
+    private func addRefreshControlToTableView() {
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: .refreshAction, for: .valueChanged)
+        tableView.refreshControl = refreshControl
+
+    }
+    
+    @objc fileprivate func refreshAction(_ sender: UIRefreshControl) {
+        delegate?.refreshData()
     }
     
 }
@@ -112,4 +131,9 @@ extension FeedSliderComponent: UITableViewDelegate, UITableViewDataSource {
         cell.subscribeToSelectedRow(completion: bindRowSelection(data:))
     }
     
+}
+
+// MARK: - Selector -
+fileprivate extension Selector {
+    static let refreshAction = #selector(FeedSliderComponent.refreshAction)
 }

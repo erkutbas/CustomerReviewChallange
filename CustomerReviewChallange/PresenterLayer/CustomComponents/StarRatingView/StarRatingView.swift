@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import RxSwift
 
 class StarRatingView: UIStackView {
     
     private var ratingButtons = [UIButton]()
     private var data: StarRatingViewData!
     
+    private var starRatingSelectionSubject = PublishSubject<Int>()
+    
     var rating = 0 {
         didSet {
             updateButtonSelectionStates()
+            starRatingSelectionSubject.onNext(rating)
         }
     }
 
@@ -33,6 +37,10 @@ class StarRatingView: UIStackView {
     
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func listenSelectedRating(completion: @escaping (Int) -> Void) -> Disposable {
+        return starRatingSelectionSubject.subscribe(onNext: completion)
     }
 
 }
